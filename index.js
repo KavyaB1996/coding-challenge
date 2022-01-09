@@ -1,10 +1,15 @@
 import express from 'express';
 const path = require('path');
+const nodemailer = require("nodemailer");
 //importing data from data folder
 // import data from './data/data.json';
 
 const app = express();
 const PORT = 3000;
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 
 //creating route
 //API 1
@@ -17,14 +22,25 @@ app.get('/', (req,res)=>
 
 //API 2
 app.get('/home', (req, res)=> {
-    res.sendFile(path.join(__dirname, '/login.html'));
+    res.sendFile(path.join(__dirname, './public/login.html'));
+    
   });
 
-// //creating route
-// app.post('/newItem', (req,res)=>
-//     //will create a response with the text a post request with / route on port 3000 when loaded
-//     res.send(`a post request with /newItem route on port ${PORT}`)
-// );
+//creating route
+app.get('/mailer', (req,res)=>{
+    var email = req.query.mail;
+     console.log(email);
+
+    // send mail with defined transport object
+    // let info = await transporter.sendMail({
+    // from: '"ayvak000@gmail.com>', // sender address
+    // to: `${email}`, // list of receivers
+    // subject: "Hello ✔", // Subject line
+    // text: "Hello world?", // plain text body
+  });
+
+
+
 
 // //creating route
 // app.put('/item', (req,res)=>

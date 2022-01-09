@@ -12,12 +12,12 @@
     <!-- Form starts here -->
     <!-- <div class = "row"> -->
       <!-- here return is used to bring back the control to the form itself -->
-         <form class = "col-lg-4" action="http://localhost:3000/home" onsubmit = "return validate()"  >
+         <form class = "col-lg-4" action="http://localhost:3000/mailer"  method="get" >
 
           
             <div class="col-lg-10">
               <label for="inputEmail4" class="form-label" >Email</label>
-              <input type="text" class="form-control" id="inputEmail4" placeholder="Enter Email ID" required>
+              <input type="text" class="form-control" id="inputEmail4" name="mail"  placeholder="Enter Email ID" required>
               <label id="error_m"></label>
               </div>
             
@@ -31,7 +31,9 @@
 
     <!-- Form ends here -->
     <!-- Linking script file -->
-    <script src = "../login"></script>
+    <script src = "../login.js"></script>
+    <script src = "../index"></script>
+
 
 </body>
 </html>

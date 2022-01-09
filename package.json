@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-
     "start": "nodemon ./index.js --exec babel-node -e js"
-    
   },
   "author": "Kavya B",
   "license": "ISC",
@@ -15,6 +13,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
     "express": "^4.17.1",
+    "nodemailer": "^6.7.2",
     "nodemon": "^2.0.15"
   }
 }
